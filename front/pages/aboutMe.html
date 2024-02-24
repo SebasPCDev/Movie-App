@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Movie App</title>
+  </head>
+  <body>
+    <main>
+      <nav class="navbar navbar-expand-lg bg-transparent fs-5">
+        <div class="container-fluid mx-3 position-relative">
+          <a class="navbar-brand me-0 col" href="#">
+            <img
+              src="../assets/catbrandicon.webp"
+              alt=""
+              class="img-fluid"
+              width="50px"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse col" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0 mx-auto gap-3">
+              <li class="nav-item mx-3">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="../index.html"
+                  >INICIO</a
+                >
+              </li>
+              <li class="nav-item mx-3">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./selectGenre.html"
+                  >GENEROS</a
+                >
+              </li>
+              <li class="nav-item mx-3">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./addMovie.html"
+                  >AÑADIR PELICULAS</a
+                >
+              </li>
+              <li class="nav-item mx-3">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./aboutMe.html"
+                  >ACERCA DE</a
+                >
+              </li>
+            </ul>
+            <form class="d-flex form-navbar ms-auto" role="search">
+              <input
+                class="form-control me-2 text-black"
+                type="search"
+                placeholder="Buscar"
+                aria-label="Search"
+              />
+              <button
+                class="btn btn-outline-secondary text-white"
+                type="submit"
+              >
+                Buscar
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <section id="aboutme_section">
+        <h2 class="p-5 text-white text-center aboutme">¿Quien soy?</h2>
+        <div class="container bg-white bg-opacity-75 rounded-5 py-3 mb-5">
+          <p class="text-black fs-5 px-5 mt-3">
+            Soy un desarrollador entusiasta que se encuentra realizando sus
+            primeros projectos. Si estás leyendo esto, es porque realmente
+            sientes un interés por el la página. Deja y te explico un poco de
+            que va esto...
+          </p>
+          <p class="text-black fs-5 px-5 mt-3">
+            Este proyecto está desarrollado principalmente utilizando las
+            tecnologías de HTML, CSS Y JavaScript. Adicional a esto,
+            implementamos el framework de BootStrap, el cual permite hacer uso
+            de herramientas para la configuración del FrontEnd, es decir, lo que
+            estás viendo justo en este momento.
+          </p>
+          <p class="text-black fs-5 px-5 mt-3">
+            La aplicación web es un prototipo de página web que permite
+            visualizar películas en formato de cartas, las cuales están
+            almancenadas en una base de datos. Para este caso, usamos MongoDB
+            junto con Mongoose. Adicional, el montaje del servidor usamos
+            Express y alguna otra librería para validación como
+            Express-validator.
+          </p>
+          <p class="text-black fs-5 px-5 mt-3">
+            Soy SebasPCDev, y si llegaste hasta este punto de la lectura, te
+            agradezco por el tiempo empleado en hacerlo. Agradezco cualquier
+            feeback que puedas darme, al final estamos es para aprender y
+            mejorar.
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-body-tertiary fs-5 bg-opacity-75 py-2 px-4">
+      <div class="d-flex">
+        <p class="mb-0 me-auto">&copy; Todos los derechos reservados</p>
+        <a
+          href="https://github.com/SebasPCDev"
+          class="icono-social mx-2"
+          title="gitHub"
+          target="_blank"
+        >
+          <img src="../assets/github.webp" alt="" />
+        </a>
+        <a
+          href="https://www.instagram.com/sebaspalomares7/"
+          class="icono-social mx-2"
+          title="Instagram"
+          target="_blank"
+        >
+          <img src="../assets/instagram.webp" alt="" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/spalomaresc/"
+          class="icono-social mx-2"
+          title="linkedIn"
+          target="_blank"
+        >
+          <img src="../assets/linkedin.webp" alt="" />
+        </a>
+        <p class="mb-0 ms-auto">Elaborado por 🐈‍⬛ SebasPCDev</p>
+      </div>
+    </footer>
+
+    <script>
+      window.addEventListener("scroll", function () {
+        let navbar = document.querySelector("nav");
+        navbar.classList.toggle("sticky-top", window.scrollY > 0);
+      });
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

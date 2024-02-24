@@ -1,0 +1,207 @@
+body {
+  /* font-family: "JetBrains Mono", monospace;
+  font-size: 20px; */
+
+  display: flex;
+  flex-direction: column;
+  min-height: 150vh;
+  margin: 0;
+  background-image: linear-gradient(
+    to bottom,
+    #000000,
+    #301c22,
+    #5d303d,
+    #8e445b,
+    #c25a7a
+  );
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+main {
+  flex: 1;
+}
+
+/* Estilos navar */
+
+.navbar {
+  transition: 0.6s;
+  z-index: 10000;
+  & a {
+    position: relative;
+    color: white !important;
+    transition: 0.6s;
+  }
+  & navbar-brand {
+    position: relative;
+    transition: 0.6s;
+  }
+
+  & ul {
+    position: relative;
+    transition: 0.6s;
+  }
+  & ul li {
+    position: relative;
+    transition: 0.6s;
+  }
+}
+
+.sticky-top {
+  background-color: #000000 !important;
+  padding: 10px 0px 10px;
+}
+
+#list_movies {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.container_movie {
+  border-radius: 30px;
+  width: 280px;
+  transition: transform 0.5s ease;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.container_movie:hover {
+  transform: scale(1.03);
+}
+
+.custom-select {
+  position: relative;
+  max-width: 400px;
+}
+
+.custom-select select {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  font-size: 18px;
+  padding: 5px 10px 5px 10px;
+  background-color: #ffffff;
+  border: 1px solid #c4d1eb;
+  border-radius: 5px;
+  color: #000000;
+  cursor: pointer;
+  outline: none;
+  margin: 15px auto;
+}
+
+.custom-select select:focus {
+  background: #f2f2f2;
+  border: 1px solid #5a7ec7;
+  border-radius: 5px;
+}
+
+.icono-social img {
+  height: 25px;
+  width: auto;
+}
+
+.icono-social img:hover {
+  transform: scale(1.05);
+}
+
+/* Estilos para acerca de */
+
+#aboutme_section p {
+  text-align: justify;
+  opacity: 1;
+}
+
+.aboutme {
+  font-size: 4rem;
+}
+
+#aboutme_section {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* estilos para generos */
+
+.main_section_genre {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+#movies {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* carrusel de slides */
+
+.carousel {
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+}
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+}
+.carousel-caption {
+  opacity: 1;
+  text-align: start;
+  right: 55%;
+  left: 10%;
+}
+
+.carousel-caption h5 {
+  font-size: 50px;
+}
+.carousel-caption p {
+  font-size: 20px;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  width: 10%;
+}
+
+.carousel-item {
+  height: 600px;
+  transition: transform 1s ease-in-out;
+}
+
+.carousel-item img {
+  opacity: 0.3;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Estilos para addMovie */
+
+.form-control::placeholder {
+  text-align: center;
+}
+
+.btn {
+  width: 100px;
+  height: auto;
+}
+
+.form-check {
+  text-align: start !important;
+}
+
+.without_ampm::-webkit-datetime-edit-ampm-field {
+  display: none;
+}
+
+input[type="time"]::-webkit-clear-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  margin: -10px;
+}

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Movie App</title>
+  </head>
+  <body>
+    <main>
+      <nav class="navbar navbar-expand-lg bg-transparent fs-5">
+        <div class="container-fluid mx-3 position-relative">
+          <a class="navbar-brand me-0 col" href="#">
+            <img
+              src="./assets/catbrandicon.webp"
+              alt=""
+              class="img-fluid"
+              width="50px"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse col" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0 mx-auto gap-3">
+              <li class="nav-item mx-3">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./index.html"
+                  >INICIO</a
+                >
+              </li>
+              <li class="nav-item mx-3">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./pages/selectGenre.html"
+                  >GENEROS</a
+                >
+              </li>
+              <li class="nav-item mx-3">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./pages/addMovie.html"
+                  >AÑADIR PELICULAS</a
+                >
+              </li>
+              <li class="nav-item mx-3">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./pages/aboutMe.html"
+                  >ACERCA DE</a
+                >
+              </li>
+            </ul>
+            <form class="d-flex form-navbar ms-auto" role="search">
+              <input
+                class="form-control me-2 text-black"
+                type="search"
+                placeholder="Buscar"
+                aria-label="Search"
+              />
+              <button
+                class="btn btn-outline-secondary text-white"
+                type="submit"
+              >
+                Buscar
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div id="carousel-under-navbar" class="carousel slide">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carousel-under-navbar"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carousel-under-navbar"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carousel-under-navbar"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="./assets/guardians2.webp"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Guardianes de la Galaxia Vol. 2</h5>
+              <p>
+                Los Guardianes de la Galaxia son una banda de forajidos
+                intergalácticos, que se unieron para proteger la galaxia de las
+                amenazas interplanetarias, bajo el mando de Rocket Raccoon.
+                Peter Quill, Gamora, Rocket, Groot y Drax se conocieron en la
+                prisión Kyln, del cual escaparon para venderle el Orbe a
+                Taneleer Tivan.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./assets/interstellarback.webp"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Interstellar</h5>
+              <p>
+                Cuando la Tierra se vuelve inhabitable en el futuro, un granjero
+                y ex piloto de la NASA, Joseph Cooper, tiene la tarea de
+                pilotear una nave espacial, junto con un equipo de
+                investigadores, para encontrar un nuevo planeta para los
+                humanos.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./assets/lordofringsback.webp"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>El Señor de los Anillos: La Comunidad del Anillo</h5>
+              <p>
+                Se ha encontrado un antiguo Anillo que se creía perdido durante
+                siglos y, a través de un extraño giro del destino, se le ha
+                entregado a un pequeño Hobbit llamado Frodo.
+              </p>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carousel-under-navbar"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carousel-under-navbar"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <section class="container mb-5" id="list_movies">
+        <h2 class="p-5 text-white text-center aboutme">Estrenos</h2>
+        <div id="container_all_movies"></div>
+      </section>
+    </main>
+
+    <footer class="bg-body-tertiary fs-5 bg-opacity-75 py-2 px-4">
+      <div class="d-flex">
+        <p class="mb-0 me-auto">&copy; Todos los derechos reservados</p>
+        <a
+          href="https://github.com/SebasPCDev"
+          class="icono-social mx-2"
+          title="gitHub"
+          target="_blank"
+        >
+          <img src="./assets/github.webp" alt="" />
+        </a>
+        <a
+          href="https://www.instagram.com/sebaspalomares7/"
+          class="icono-social mx-2"
+          title="Instagram"
+          target="_blank"
+        >
+          <img src="./assets/instagram.webp" alt="" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/spalomaresc/"
+          class="icono-social mx-2"
+          title="linkedIn"
+          target="_blank"
+        >
+          <img src="./assets/linkedin.webp" alt="" />
+        </a>
+        <p class="mb-0 ms-auto">Elaborado por 🐈‍⬛ SebasPCDev</p>
+      </div>
+    </footer>
+    <script src="./public/script1.js"></script>
+    <script>
+      window.addEventListener("scroll", function () {
+        let navbar = document.querySelector("nav");
+        navbar.classList.toggle("sticky-top", window.scrollY > 0);
+      });
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

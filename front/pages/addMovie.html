@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Movie App</title>
+  </head>
+  <body>
+    <main>
+      <nav class="navbar navbar-expand-lg bg-transparent fs-5">
+        <div class="container-fluid mx-3 position-relative">
+          <a class="navbar-brand me-0 col" href="#">
+            <img
+              src="../assets/catbrandicon.webp"
+              alt=""
+              class="img-fluid"
+              width="50px"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse col" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0 mx-auto gap-3">
+              <li class="nav-item mx-3">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="../index.html"
+                  >INICIO</a
+                >
+              </li>
+              <li class="nav-item mx-3">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./selectGenre.html"
+                  >GENEROS</a
+                >
+              </li>
+              <li class="nav-item mx-3">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./addMovie.html"
+                  >AÑADIR PELICULAS</a
+                >
+              </li>
+              <li class="nav-item mx-3">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./aboutMe.html"
+                  >ACERCA DE</a
+                >
+              </li>
+            </ul>
+            <form class="d-flex form-navbar ms-auto" role="search">
+              <input
+                class="form-control me-2 text-black"
+                type="search"
+                placeholder="Buscar"
+                aria-label="Search"
+              />
+              <button
+                class="btn btn-outline-secondary text-white"
+                type="submit"
+              >
+                Buscar
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <section>
+        <h2 class="p-5 text-white text-center aboutme">¡Añade Películas!</h2>
+        <h3 class="mb-4 text-white text-center">
+          Llenar el siguiente formulario
+        </h3>
+        <form
+          id="add-movie-form"
+          class="container bg-transparent bg-opacity-75 rounded-5 py-3 mb-5"
+        >
+          <div class="row text-center text-white text-white">
+            <div class="mb-1 fs-4 p-4 col">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Nombre</label
+              >
+              <input
+                required
+                name="title"
+                class="form-control input-value"
+                id="exampleFormControlInput1"
+                placeholder="Nombre de la película"
+              />
+            </div>
+            <div class="mb-1 fs-4 p-4 col">
+              <label for="exampleFormControlInput2" class="form-label"
+                >Año</label
+              >
+              <input
+                required
+                name="year"
+                class="form-control input-value"
+                id="exampleFormControlInput2"
+                placeholder="Año de la película"
+              />
+            </div>
+            <div class="mb-1 fs-4 p-4 col">
+              <label for="exampleFormControlInput3" class="form-label"
+                >Director</label
+              >
+              <input
+                required
+                name="director"
+                class="form-control input-value"
+                id="exampleFormControlInput3"
+                placeholder="Nombre del director"
+              />
+            </div>
+          </div>
+          <div class="row text-center text-white">
+            <div class="mb-1 fs-4 p-4 col">
+              <label for="exampleFormControlInput4" class="form-label"
+                >Duración</label
+              >
+              <input
+                required
+                name="duration"
+                class="form-control input-value"
+                id="exampleFormControlInput4"
+                placeholder="Duración de la película"
+              />
+            </div>
+            <!-- exampleFormControlInput5 -->
+            <div class="mb-1 fs-4 p-4 col">
+              <label for="exampleFormControlInput5" class="form-label"
+                >Género</label
+              >
+              <div class="fs-5 row">
+                <div class="form-check col">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="Action"
+                    id="flexCheckDefaultAction"
+                  />
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Acción
+                  </label>
+                </div>
+                <div class="form-check col">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="Crime"
+                    id="flexCheckDefaultCrime"
+                  />
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Crimen
+                  </label>
+                </div>
+                <div class="form-check col">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="Drama"
+                    id="flexCheckDefaultDrama"
+                  />
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Drama
+                  </label>
+                </div>
+              </div>
+              <div class="row fs-5">
+                <div class="form-check col">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="Sci-Fi"
+                    id="flexCheckDefaultSciFi"
+                  />
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Ciencia Ficción
+                  </label>
+                </div>
+                <div class="form-check col">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="Fantasy"
+                    id="flexCheckDefaultFantasy"
+                  />
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Fantasia
+                  </label>
+                </div>
+                <div class="form-check col">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="Adventure"
+                    id="flexCheckDefaultAdventure"
+                  />
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Aventura
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="mb-1 fs-4 p-4 col">
+              <label for="customRange3" class="form-label">Calificación</label>
+              <input
+                name="rate"
+                type="range"
+                class="form-range"
+                min="0"
+                max="10"
+                step="0.1"
+                id="exampleFormControlInput6"
+                oninput="updateRating(this.value)"
+              />
+              <p id="ratingValue" class="fs-5 text-center">⭐</p>
+            </div>
+          </div>
+          <div class="row text-center text-white">
+            <div class="mb-1 fs-4 p-4 row w-75 m-auto">
+              <label for="exampleFormControlInput7" class="form-label"
+                >URL del poster</label
+              >
+              <input
+                required
+                name="poster"
+                class="form-control input-value"
+                id="exampleFormControlInput7"
+                placeholder="https://"
+              />
+            </div>
+            <div class="mb-1 fs-4 p-4 row w-75 m-auto">
+              <label for="exampleFormControlInput8" class="form-label"
+                >Descripción</label
+              >
+              <textarea
+                class="form-control input-value"
+                id="exampleFormControlInput8"
+                rows="3"
+                placeholder="Agregue la descripción de la película"
+              ></textarea>
+            </div>
+          </div>
+          <div class="d-grid mt-4 justify-content-center">
+            <div class="row gap-4">
+              <button
+                class="btn btn-secondary fs-5 btn-lg col"
+                type="submit"
+                id="submitButton"
+              >
+                Crear
+              </button>
+              <button
+                class="btn btn-secondary fs-5 btn-lg col"
+                type="button"
+                id="clearButton"
+              >
+                Limpiar
+              </button>
+            </div>
+          </div>
+        </form>
+        <div class="fs-4 text-white text-center res-status-message"></div>
+      </section>
+    </main>
+    <footer class="bg-body-tertiary fs-5 bg-opacity-75 py-2 px-4">
+      <div class="d-flex">
+        <p class="mb-0 me-auto">&copy; Todos los derechos reservados</p>
+        <a
+          href="https://github.com/SebasPCDev"
+          class="icono-social mx-2"
+          title="gitHub"
+          target="_blank"
+        >
+          <img src="../assets/github.webp" alt="" />
+        </a>
+        <a
+          href="https://www.instagram.com/sebaspalomares7/"
+          class="icono-social mx-2"
+          title="Instagram"
+          target="_blank"
+        >
+          <img src="../assets/instagram.webp" alt="" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/spalomaresc/"
+          class="icono-social mx-2"
+          title="linkedIn"
+          target="_blank"
+        >
+          <img src="../assets/linkedin.webp" alt="" />
+        </a>
+        <p class="mb-0 ms-auto">Elaborado por 🐈‍⬛ SebasPCDev</p>
+      </div>
+    </footer>
+    <script>
+      window.addEventListener("scroll", function () {
+        let navbar = document.querySelector("nav");
+        navbar.classList.toggle("sticky-top", window.scrollY > 0);
+      });
+    </script>
+    <script>
+      function updateRating(value) {
+        // Actualizar el contenido del elemento <p> con el valor seleccionado
+        document.getElementById("ratingValue").innerText = value + "⭐";
+      }
+    </script>
+    <script src="../public/script3.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
